@@ -1,0 +1,164 @@
+.profileDiv{
+    box-sizing: content-box;
+    padding: 40px 20px 0;
+
+}
+
+.profileHeader{
+    margin-bottom: 44px;
+    border-bottom: 1px solid #efefef;
+    margin-left:auto;
+    padding-bottom: 40px;
+}
+
+.profileButton{
+    border: 0;
+    padding: 0;
+}
+.profilePic{
+
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.userPostImage{
+    max-width:100%;
+    height:300px;
+    display: block;
+    transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.postsByUser{
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+.postImageCard{
+    height: 300px;
+    padding: 0;
+    width: 300px;
+}
+.section1{
+    margin-bottom: 20px;
+    align-items: center;
+    flex-direction: row;
+    display: flex;
+}
+.containerForPost{
+    padding: 0;
+    margin-right: 0;
+    margin-left: 0;
+    padding-right: 0;
+}
+.userName{
+    display: block;
+    color: #262626;
+    font-weight: 300;
+    font-size: 28px;
+    line-height: 35px;
+    margin: -5px 0 -6px;
+}
+
+.editLink{
+    margin-left: 20px;
+}
+.editButton{
+    border: 1px solid #dbdbdb;
+    color: #262626;
+    border-radius:4px;
+    background-color:transparent;
+    padding: 5px 9px;
+    font-weight: 600;
+
+}
+
+.followButton{
+    padding: 0 24px;
+    background: #3897f0;
+    border-color: #3897f0;
+    color: #fff;
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 1px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 26px;
+}
+
+.followButton:hover{
+    color: white;
+}
+
+.postBackdrop{
+   
+        height: 100%;
+        width: 100%;   
+        transition: .5s ease;
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        text-align: center;
+        color: white;
+
+}
+
+.postImageCard:hover .userPostImage {
+    opacity: 0.3;
+  }
+  
+  .postImageCard:hover .postBackdrop {
+    opacity: 0.5;
+    background-color: rgba(0, 0, 0, 0.3);  
+  }
+
+.postImageCard:hover .postBackdropIcons {
+    opacity: 1;
+  }
+
+.likeCommentOnPost{
+    margin-left: 0 auto;
+    margin-top: 52%
+}
+
+.deletePost{
+
+    background-color: #f15e5e;
+    border-radius: 7px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: 7px;
+}
+.postBackdropIcons{
+    color: white;
+    opacity: 1;
+    font-size: 24px;
+}
+
+.deletePost:hover{
+    background-color: #f13a3a;
+}
+
+.EditPost{
+    background-color: #eeb711;
+    border-radius: 7px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.EditPost:hover{
+    background-color: #ee9e26;
+}
+
+@media (max-width: 875px) {
+    .postsByUser{
+        padding-left: 50px;
+        padding-right: 0px;
+    }
+    
+}

@@ -1,0 +1,110 @@
+.postModal {
+    position: fixed;
+    z-index: 500;
+    background-color: white;
+    width: 100%;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px black;
+    
+    top: 25%;
+    box-sizing: border-box;
+    transition: all 0.3s ease-out;
+    border-radius:4px
+}
+.SinglePostContainer{
+    background-color: #fff;
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+    max-width: 935px;
+    overflow: hidden;
+    width: 100%;
+    flex-direction: row;
+    display: flex;
+    padding-right: 0;
+
+}
+
+.sideContainer{
+
+}
+
+.singlePostImage{
+    width: 300px;
+    height: 300px;
+}
+
+.eachComment:hover{
+    background-color: #dbdbdb;
+}
+
+.singlePostHeader{
+    display: flex;
+    border-bottom: 1px solid #dbdbdb;
+    padding-bottom: 10px;
+}
+
+.commentSection{
+    overflow-y: scroll;
+    height: 200px;
+}
+
+.addCommentSection{
+    background-color: #dbdbdb;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.addCommentInput{
+    border-radius: 5px;
+    margin-left: 25px;
+    padding-right: 95px;
+    font-size: 14px;
+    padding-left: 10px;
+    margin-right: 10px;
+}
+
+.submitComment{
+    background-color: #e9c893;
+    font-size: 14px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.submitComment:hover{
+    background-color: #eeaa78;
+}
+
+.fa-times{
+    margin-right: 0px;
+    color: blue;
+    margin-top: 5px;
+}
+
+.fa-times:hover{
+    color: red;
+}
+
+.commentBody{
+    margin-left: 15px;
+    font-size: 14px;
+    color: black;
+    font-weight: 400;
+}
+
+.deleteComment{
+    margin-left: 30px
+}
+.commentPostedBy{
+    font-size: 16px;
+}
+.addCommentInput:focus { outline: none !important; box-shadow: none !important; }
+@media (min-width: 600px) {
+    .postModal {
+        width: 700px;
+        left: calc(50% - 300px);
+    }
+}

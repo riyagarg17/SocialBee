@@ -1,0 +1,12 @@
+.slideShowDiv{
+    position: relative;
+    bottom: 1040px;
+    z-index: 3;
+    left: 115px;
+    display: flex;
+}
+
+#slideImg{
+    height: 430px;
+    width: 245px;
+}

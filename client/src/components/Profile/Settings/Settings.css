@@ -1,0 +1,139 @@
+.settingsContainer{
+    background-color: #fff;
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+    margin: 60px auto 0;
+    max-width: 935px;
+    overflow: hidden;
+    width: 100%;
+    flex-direction: row;
+    display: flex;
+    padding-right: 0;
+
+}
+
+.sideSettings{
+    border-left: 2px solid transparent;
+    height: 100%;
+    line-height: 20px;
+    padding: 16px 16px 16px 30px;
+    display: block;
+    font-size: 16px;
+    color: #262626;
+    font-weight: 400;
+    
+    
+}
+
+.sideSettings:hover{
+    text-decoration: none;
+    background-color: #f6faf3fd;
+    color: #262626;
+    border-left: 2px solid #c0baba;
+}
+.side{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    width: 30%;
+    border-right: 1px solid #dbdbdb;
+    padding-top: 50px;
+}
+
+.mainContainer{
+    padding-left: 50px;
+    width: 60%;
+}
+
+.noUserImg{
+    border-radius: 50%;
+    background-image: url(https://britz.mcmaster.ca/images/nouserimage.gif/image);
+    border:0 solid #000;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    display: block;
+    background-size: cover;
+    border: 1px solid rgb(199, 195, 195)
+}
+
+.editInput{
+    padding-right:130px;
+    border: solid 1px #efefef;
+    border-radius:4px;
+    padding-left:16px;
+    padding-top:3px;
+    padding-bottom:3px;
+    color:#262626;
+    margin-bottom: 14px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.modalContent1{
+    padding: 4px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+}
+
+.modalHeader1{
+    background: #47c9a2;
+    border-bottom: none;
+    position: relative;
+    text-align: center;
+    margin: -20px -20px 0;
+    border-radius: 5px 5px 0 0;
+    padding: 35px;
+}
+
+.modalText1{
+    position: relative;
+    padding: 15px;
+    
+}
+.modalButton{
+    color: #fff;
+    background: #eeb711;
+    text-decoration: none;
+    border-radius: 30px;
+    margin-top: 10px;
+    padding: 10px 24px;
+    border: none;
+}
+
+.modalButton:hover{
+    background: #ee9e26;
+    color: white;
+}
+.modalIcon1{
+    color: #fff;
+    width: 95px;
+    height: 95px;
+    display: inline-block;
+    border-radius: 50%;
+    z-index: 9;
+    border: 5px solid #fff;
+    padding: 15px;
+    text-align: center;
+}
+
+.cancelButton{
+    background-color: #c1c1c1;
+    color:#fff
+}
+
+.deleteButton{
+    background-color: #f15e5e;
+    color:#fff
+}
+.cancelButton:hover{
+    background-color: #929191;
+    color:#fff
+}
+.deleteButton:hover{
+    background-color: #f04444;
+    color:#fff
+}
+button:focus { outline: none !important; box-shadow: none !important; }
+/* background-color: #fafafa;*/

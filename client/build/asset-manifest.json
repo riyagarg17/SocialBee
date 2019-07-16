@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.9eec0255.chunk.css",
+    "main.js": "/static/js/main.7aa9c1cc.chunk.js",
+    "main.js.map": "/static/js/main.7aa9c1cc.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
+    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
+    "static/js/2.b51e5cf5.chunk.js": "/static/js/2.b51e5cf5.chunk.js",
+    "static/js/2.b51e5cf5.chunk.js.map": "/static/js/2.b51e5cf5.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.c2354bb270c212c36303ff323033f858.js": "/precache-manifest.c2354bb270c212c36303ff323033f858.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.9eec0255.chunk.css.map": "/static/css/main.9eec0255.chunk.css.map",
+    "static/media/iphone1.png": "/static/media/iphone1.57cafd8d.png",
+    "static/media/iphone2.png": "/static/media/iphone2.f10455bf.png"
+  }
+}

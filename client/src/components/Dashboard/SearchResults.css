@@ -1,0 +1,50 @@
+.searchResultDiv{
+    background: #fff;
+    border: solid 1px #e6e6e6;
+    display: block;
+    /*left: 64.9%;*/
+    margin-left: -121px;
+    position: absolute;
+    left: 122px;
+    top: 28px;
+    width: 237px;
+    z-index: 9;
+    box-shadow: 0 0 5px rgba(0,0,0,.0975);
+    max-height: 362px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.eachUser{
+    list-style: none;
+    height: 50px;
+    padding-left: 10px;
+    border-bottom: solid 1px #efefef;
+}
+
+.eachUser:hover{
+    background-color: #e6e6e6;
+}
+
+.searchResultUsername{
+    font-size: 14px;
+    margin-bottom: -4px;
+    line-height: 22px;
+    overflow: hidden;
+    font-weight: 600;
+    text-overflow: ellipsis;
+    color: black;
+}
+
+.searchResultFullname{
+    font-size: 14px;
+    margin-bottom: -4px;
+    line-height: 22px;
+    overflow: hidden;
+    font-weight: 300;
+    text-overflow: ellipsis;
+    color: #999;
+}
+.searchResultUsername:hover{
+    color: black;
+}
