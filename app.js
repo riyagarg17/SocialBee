@@ -96,13 +96,16 @@ app.use(function (err, req, res, next) {
 }); */
 
 //serve static assets in production
+const root = require('path').join(__dirname, 'client', 'build');
+app.use(express.static(root));
 if (process.env.NODE_ENV === "production") {
   //app.use(express.static("client/build"));
   app.get("*",(req,res)=>{
     //console.log(path.join(__dirname, '/client/build/index.html'));
-    app.use(express.static(path.join(__dirname,'/client/build')));
-    const staticPath=path.join(__dirname, '/client/build/index.html');
-    res.sendFile(staticPath);
+    //app.use(express.static(path.join(__dirname,'/client/build')));
+    //const staticPath=path.join(__dirname, '/client/build/index.html');
+    //res.sendFile(staticPath);
+    res.sendFile('index.html', { root });
   });
 }
 
