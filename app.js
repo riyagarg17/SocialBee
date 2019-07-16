@@ -101,7 +101,7 @@ if (process.env.NODE_ENV === "production") {
   app.get("*",(req,res)=>{
     //console.log(path.join(__dirname, '/client/build/index.html'));
     app.use(express.static(path.join(__dirname,'/client/build')));
-    const staticPath=path.resolve(__dirname, '/client/build/index.html');
+    const staticPath=path.join(__dirname, '/client/build/index.html');
     res.sendFile(staticPath);
   });
 }
