@@ -16,7 +16,7 @@ const app=express();
 
 mongoose.set('useFindAndModify', false);
 
-app.use(cookieParser(process.env.JWT_Key));
+app.use(cookieParser());
 
 //express-session middleware
 /*app.use(session({
