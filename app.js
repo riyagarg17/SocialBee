@@ -51,9 +51,9 @@ const auth=require('./Routes/auth');
 //app.use(morgan("dev"));
 
 //use routes
-app.use('/',postRoutes);
-app.use('/',userRoutes);
-app.use('/',auth);
+app.use('/api',postRoutes);
+app.use('/api',userRoutes);
+app.use('/api',auth);
 
 //connect to mongoose
 mongoose.connect(db.mongoURI, { useNewUrlParser: true })
