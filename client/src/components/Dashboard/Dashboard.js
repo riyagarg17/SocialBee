@@ -237,7 +237,7 @@ class Dashboard extends Component {
         const token = isAuthenticated().token;
 
         getPosts(user._id, token).then(data => {
-            console.log(data);
+            //console.log(data);
             if (data.error) {
                 this.setState({ error: data.error })
             } 

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './AddPost.css';
-import {isAuthenticated} from '../../auth/index';
+import {isAuthenticated,hasAutherization} from '../../auth/index';
 import {createPost} from '../../auth/apiPost';
 import { Redirect } from 'react-router-dom';
 
@@ -73,33 +73,41 @@ class AddPost extends Component {
         }
 
         return (
-            <div className="addPostDiv">
-                <h4 className="newPostText mb-3"> New Post</h4>
-                <hr style={{ width: "500px", margin: "0 auto" }} />
-                <form encType='multipart/form-data' onSubmit={this.handleSubmit}>
-                <div className="captionDiv">
-                    <input type="text" name="caption" placeholder="Write a caption.." className="captionInput" onChange={this.handleChange} autoComplete="off" />
-                </div>
-                <div className="postImageDiv mb-3">
-                    <button className="chip mt-4" type="button" onClick={this.uploadPhotoDialog}>
-                        <div className="uploadImageIcon"> 
-                           
-                        </div>
-                        Upload Image
-                        
-                        <input type="file" accept="image/*" style={{ display: "none" }} onChange={this.handleChange} id="photo" name="photo" />
-                        
-                    </button>
-                    {this.state.file && 
-                        <div className="uploadedImageDiv mt-4">
-                            <img  className="uploadedImage" src={this.state.file} alt=""/>
-                        </div>
-                    }
-                    
-                </div>
-                <button type="submit" className="btn submitPostButton" disabled={true} id="submitPostButton"> Add Post </button>
-                </form>
+            <>
+
+{hasAutherization && isAuthenticated && 
+
+    <div className="addPostDiv">
+    <h4 className="newPostText mb-3"> New Post</h4>
+    <hr style={{ width: "500px", margin: "0 auto" }} />
+    <form encType='multipart/form-data' onSubmit={this.handleSubmit}>
+    <div className="captionDiv">
+        <input type="text" name="caption" placeholder="Write a caption.." className="captionInput" onChange={this.handleChange} autoComplete="off" />
+    </div>
+    <div className="postImageDiv mb-3">
+        <button className="chip mt-4" type="button" onClick={this.uploadPhotoDialog}>
+            <div className="uploadImageIcon"> 
+               
             </div>
+            Upload Image
+            
+            <input type="file" accept="image/*" style={{ display: "none" }} onChange={this.handleChange} id="photo" name="photo" />
+            
+        </button>
+        {this.state.file && 
+            <div className="uploadedImageDiv mt-4">
+                <img  className="uploadedImage" src={this.state.file} alt=""/>
+            </div>
+        }
+        
+    </div>
+    <button type="submit" className="btn submitPostButton" disabled={true} id="submitPostButton"> Add Post </button>
+    </form>
+</div>
+            }
+            </> 
+            
+           
         )
     }
 }
