@@ -1,13 +1,12 @@
 const express=require('express');
-const {allUsers,userById,getUser,updateUser,addFollowing,addFollower,removeFollower,removeFollowing,
-    deleteUser,hasAutherization,allUsersSearch,uploadImage,userPhoto}=require('../controllers/user');
+
+const {allUsers,userById,getUser,updateUser,addFollowing,
+    addFollower,removeFollower,removeFollowing,
+    deleteUser,allUsersSearch,uploadImage,userPhoto}=require('../controllers/user');
 const {authenticate}=require('../controllers/auth');
+
 const router = express.Router();
-//router.get('/user/:userID',ensureAuthenticated, userController.findUser);
 
-//router.post('/user',ensureAuthenticated,userController.allUsers);
-
-//router.get('/profile',userProfile);
 
 router.get('/users',allUsers);
 

@@ -1,5 +1,4 @@
 const mongoose=require('mongoose');
-const { ObjectId } = mongoose.Schema;
 const formidable=require('formidable');
 const _=require('lodash');
 const fs=require('fs');
@@ -7,15 +6,6 @@ const fs=require('fs');
 //loading post model
 require('../models/post');
 const Post =mongoose.model('post');
-
-//get all posts
-exports.getPost=(req,res)=>{
-    const post=Post.find().populate('postedBy','_id userName fullName image ')
-    .then(posts=>{
-        res.json(posts);
-    })
-    .catch(err=>res.status(400).json({error:err}));
-};
 
 exports.getAllPostsByFollowing= (req,res)=>{
 
@@ -36,14 +26,13 @@ exports.getAllPostsByFollowing= (req,res)=>{
         if(posts.length==0){
             res.json({message:"Start Following to see posts"});
         }
-        //console.log(posts.comments);
+       
         else{
             res.json(posts);
         }
         
     });
         
-    //{where:{postedBy:{inq:req.followingUsersId}}}
 };
 
 exports.createPost=(req,res)=>{
@@ -70,7 +59,7 @@ exports.createPost=(req,res)=>{
 };
 
 exports.singlePost = (req, res) => {
-    console.log("single post called");
+    //console.log("single post called");
     return res.json(req.post);
 };
 
@@ -155,13 +144,13 @@ exports.deletePost=(req,res)=>{
     });
 };
 
-exports.hasAutherization=(req,res,next)=>{
+/*exports.hasAutherization=(req,res,next)=>{
     const autherized=req.post && req.auth && req.post._id==req.auth._id;
     if(!autherized){
         return res.status(403).json({error:"Not Autherized"});
     }
     next();
-};
+};*/
 
 exports.updatePost = (req, res, next) => {
     let form = new formidable.IncomingForm();

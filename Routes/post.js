@@ -3,11 +3,9 @@ const router = express.Router();
 const {authenticate}=require('../controllers/auth');
 const {userById}=require('../controllers/user');
 
-const {getPost,createPost,postsByUser,postById,hasAutherization,deletePost,
-    getFollowing,updatePost,getAllPostsByFollowing,getPostImage,
+const {createPost,postsByUser,postById,deletePost,updatePost,getAllPostsByFollowing,getPostImage,
     unlikePost,likePost,comment,uncomment,singlePost}=require('../controllers/post');
 
-//router.get('/getPosts/:userId',authenticate, getPost);
 router.get('/postsby/:userId',authenticate,postsByUser);
 
 router.post('/addPost/:userId',authenticate,createPost);

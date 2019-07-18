@@ -78,7 +78,6 @@ exports.login = (req, res) => {
 
 exports.logout = (req, res) => {
   res.clearCookie('token');
-  //res.redirect('/');
   console.log("Signed out successfully!");
   return res.json({message:"Signed out successfully!"});
 };
